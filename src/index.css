@@ -1,0 +1,109 @@
+/* ==========================================================================
+   DESIGN SYSTEM & BRAND COLOR PALETTE (60-30-10 RULE)
+   60% White (Main Canvas, Cards, Containers)
+   30% Dusty Blue (Header, System Tabs, Accents, Borders, Sub-surfaces)
+   10% Black (Headings, Primary Buttons, Active Underline, Icons)
+   ========================================================================== */
+
+:root {
+  /* LIGHT MODE (Default) */
+  --bg-white: #FFFFFF;
+  --bg-surface: #F8FAFC;
+
+  --dusty-blue-primary: #5C7C8D;
+  --dusty-blue-hover: #486473;
+  --dusty-blue-light: #EBF1F5;
+  --dusty-blue-subtle: #F1F5F8;
+  --dusty-blue-border: #D1DEE6;
+  --dusty-blue-dark: #3A5362;
+
+  --text-black: #0B0F17;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+
+  --btn-black: #0F172A;
+  --btn-black-hover: #1E293B;
+
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --shadow-subtle: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* DARK MODE THEME SYSTEM */
+[data-theme="dark"] {
+  --bg-white: #0F172A;
+  --bg-surface: #090D16;
+
+  --dusty-blue-primary: #7898A7;
+  --dusty-blue-hover: #93B0C0;
+  --dusty-blue-light: #1E293B;
+  --dusty-blue-subtle: #182234;
+  --dusty-blue-border: #334155;
+  --dusty-blue-dark: #CBD5E1;
+
+  --text-black: #F8FAFC;
+  --text-dark: #E2E8F0;
+  --text-muted: #94A3B8;
+
+  --btn-black: #F8FAFC;
+  --btn-black-hover: #E2E8F0;
+
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode override for primary button text */
+[data-theme="dark"] .btn-black {
+  color: #0F172A !important;
+}
+
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .social-card,
+[data-theme="dark"] .work-card,
+[data-theme="dark"] .contact-card {
+  background-color: #0F172A;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .template-notice {
+  background-color: #1E293B;
+  color: #F8FAFC;
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: rgba(15, 23, 42, 0.95);
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .tabs-system-bar {
+  background-color: rgba(24, 34, 52, 0.95);
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .tab-sliding-indicator {
+  background-color: #F8FAFC;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-family);
+  background-color: var(--bg-surface);
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
