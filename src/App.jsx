@@ -106,10 +106,10 @@ function App() {
   const snippetTimerRef = useRef(null)
 
   const tabs = [
-    { id: 'about', label: '1. About Jeffrey Kay', icon: User },
+    { id: 'about', label: '1. About JeffreyK', icon: User },
     { id: 'socials', label: '2. Social Media Hub', icon: Share2 },
     { id: 'works', label: '3. Gospel Music & Snippets', icon: Disc },
-    { id: 'contact', label: '4. WhatsApp & Email Contact', icon: Mail }
+    { id: 'contact', label: '4. Email Contact', icon: Mail }
   ]
 
   const updateIndicator = (tabId) => {
@@ -218,7 +218,7 @@ function App() {
   const socials = [
     {
       platform: 'Spotify',
-      handle: 'Jeffrey Kay',
+      handle: 'JeffreyK',
       url: 'https://spotify.com',
       icon: SpotifyIcon,
       desc: 'Stream gospel tracks & latest worship releases'
@@ -232,19 +232,11 @@ function App() {
     },
     {
       platform: 'YouTube Music',
-      handle: 'Jeffrey Kay Gospel',
+      handle: 'JeffreyK Gospel',
       url: 'https://music.youtube.com/watch?v=Ufq9mRs5pmw&si=9Hjf8dZpbU1v9krn',
       icon: YoutubeIcon,
       desc: 'Official gospel music videos & live ministry'
-    },
-    {
-      platform: 'WhatsApp',
-      handle: '+27 [Your Phone Number]',
-      url: 'https://wa.me/27000000000',
-      icon: WhatsAppIcon,
-      desc: 'Direct messaging for ministry & event bookings'
-    },
-    {
+    },    {
       platform: 'X (Twitter)',
       handle: '@jeffreykay_sa',
       url: 'https://x.com',
@@ -253,14 +245,14 @@ function App() {
     },
     {
       platform: 'Apple Music',
-      handle: 'Jeffrey Kay',
+      handle: 'JeffreyK',
       url: 'https://music.apple.com',
       icon: Disc,
       desc: 'Listen to gospel albums in high fidelity'
     },
     {
       platform: 'SoundCloud',
-      handle: 'Jeffrey Kay Gospel',
+      handle: 'JeffreyK Gospel',
       url: 'https://soundcloud.com',
       icon: Share2,
       desc: 'Acoustic worship sessions & live recordings'
@@ -279,7 +271,7 @@ function App() {
       id: 'track-1',
       title: 'Ngipha\'Mandla',
       category: 'Official Gospel Single',
-      desc: 'A powerful South African gospel worship song by Jeffrey Kay asking for divine strength and grace.',
+      desc: 'A powerful South African gospel worship song by JeffreyK asking for divine strength and grace.',
       year: '2026',
       youtubeUrl: 'https://music.youtube.com/watch?v=Ufq9mRs5pmw&si=9Hjf8dZpbU1v9krn',
       youtubeEmbedId: 'Ufq9mRs5pmw',
@@ -289,7 +281,7 @@ function App() {
     },
     {
       id: 'track-2',
-      title: 'Jeffrey Kay - Gospel Worship Live',
+      title: 'JeffreyK - Gospel Worship Live',
       category: 'Live Ministry Performance',
       desc: 'Spirit-filled live worship performance bringing inspirational gospel praise to audiences everywhere.',
       year: '2026',
@@ -318,7 +310,7 @@ function App() {
             </div>
 
             <p className="modal-description">
-              Choose your preferred music streaming service below to open <strong>{platformModalTrack.title}</strong> by Jeffrey Kay:
+              Choose your preferred music streaming service below to open <strong>{platformModalTrack.title}</strong> by JeffreyK:
             </p>
 
             <div className="platform-options-grid">
@@ -400,7 +392,7 @@ function App() {
       <header className="navbar">
         <div className="nav-brand">
           <div className="brand-icon">JK</div>
-          <span className="brand-name">Jeffrey Kay</span>
+          <span className="brand-name">JeffreyK</span>
         </div>
 
         <div className="nav-actions">
@@ -492,32 +484,22 @@ function App() {
             <div className="container">
               <div className="hero-grid">
                 <div className="hero-content">
-                  <div className="artist-title-badge">
-                    <Sparkles size={16} />
-                    <span>Gospel Artist &amp; Worship Leader</span>
-                  </div>
-
-                  <h1 className="hero-heading">
-                    Hello, I am <br />
-                    <span>Jeffrey Kay</span>
-                  </h1>
-
                   <p className="hero-bio">
-                    Welcome to my official portfolio! I am <strong>Jeffrey Kay</strong>, a passionate Gospel singer, songwriter, and worship leader based in <strong>South Africa</strong>. Creator of the inspirational single <em>&quot;Ngipha&apos;Mandla&quot;</em>.
+                    Jeffrey Sakhile Khumalo, known as <strong>JeffreyK</strong>, is a gospel artist from <strong>Kwa-Thema, Springs</strong>. Raised in a church family and shaped by theatre alongside Sipho Mnyakeni, his journey through trials led him back to God. Choosing gospel as a calling, his music is a testimony of faith and rebirth. <strong>JeffreyK – Reborn to Worship.</strong>
                   </p>
 
                   <div className="hero-stats">
                     <div className="stat-card">
                       <div className="stat-label">Origin</div>
-                      <div className="stat-value">South Africa</div>
+                      <div className="stat-value">Kwa-Thema, Springs</div>
                     </div>
                     <div className="stat-card">
                       <div className="stat-label">Genre</div>
                       <div className="stat-value">Gospel Music</div>
                     </div>
                     <div className="stat-card">
-                      <div className="stat-label">Latest Single</div>
-                      <div className="stat-value">Ngipha&apos;Mandla</div>
+                      <div className="stat-label">Mission</div>
+                      <div className="stat-value">Reborn to Worship</div>
                     </div>
                   </div>
 
@@ -534,16 +516,16 @@ function App() {
                   </div>
                 </div>
 
-                {/* Updated Real Photo of Jeffrey Kay */}
+                {/* Updated Real Photo of JeffreyK */}
                 <div className="hero-image-container">
                   <div className="hero-image-card">
                     <img
                       src="/jeffrey_kay.jpg"
-                      alt="Jeffrey Kay - Ngipha'Mandla Cover"
+                      alt="JeffreyK - Ngipha'Mandla Cover"
                       className="hero-artist-img"
                     />
                     <div className="hero-image-caption" style={{ marginTop: '12px' }}>
-                      Jeffrey Kay — Ngipha&apos;Mandla
+                      JeffreyK — Ngipha&apos;Mandla
                     </div>
                   </div>
                 </div>
@@ -558,7 +540,7 @@ function App() {
             <div className="container">
               <div className="section-header">
                 <span className="section-tag">Connect &amp; Follow</span>
-                <h2 className="section-title">Jeffrey Kay Social Hub</h2>
+                <h2 className="section-title">JeffreyK Social Hub</h2>
                 <p className="section-description">
                   Explore official music channels, stream worship songs, and connect across all platforms.
                 </p>
@@ -689,7 +671,7 @@ function App() {
           </section>
         )}
 
-        {/* TAB 4: WHATSAPP & EMAIL CONTACT */}
+        {/* TAB 4: EMAIL CONTACT */}
         {activeTab === 'contact' && (
           <section id="contact" className="section section-bg-alt">
             <div className="container">
@@ -697,45 +679,11 @@ function App() {
                 <span className="section-tag">Get in Touch</span>
                 <h2 className="section-title">Contact &amp; Gospel Ministry Bookings</h2>
                 <p className="section-description">
-                  Connect with Jeffrey Kay for church events, gospel concerts, collaborations, or WhatsApp messaging.
+                  Connect with JeffreyK for church events, gospel concerts, and collaborations.
                 </p>
               </div>
 
               <div className="contact-grid">
-                {/* Option A: WhatsApp Direct Connection */}
-                <div id="whatsapp-section" className="contact-card contact-card-highlight">
-                  <div className="contact-icon-badge contact-icon-whatsapp">
-                    <WhatsAppIcon size={32} />
-                  </div>
-                  <h3 className="contact-card-title">Chat on WhatsApp</h3>
-                  <p className="contact-card-desc">
-                    Connect directly via WhatsApp for quick booking inquiries, ministry invitations, and instant communication.
-                  </p>
-
-                  <div className="contact-info-list">
-                    <div className="contact-info-item">
-                      <Phone size={18} color="#25D366" />
-                      <span>WhatsApp: +27 [Your Phone Number]</span>
-                    </div>
-                    <div className="contact-info-item">
-                      <MessageSquare size={18} color="#5C7C8D" />
-                      <span>Location: South Africa</span>
-                    </div>
-                  </div>
-
-                  <a
-                    href="https://wa.me/27000000000?text=Hello%20Jeffrey%20Kay%2C%20I%20am%20reaching%20out%20regarding%20a%20gospel%20booking!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-whatsapp"
-                    style={{ width: '100%', padding: '14px', fontSize: '16px' }}
-                  >
-                    <WhatsAppIcon size={22} />
-                    Open WhatsApp Chat
-                    <ExternalLink size={16} />
-                  </a>
-                </div>
-
                 {/* Option B: Direct Email Form */}
                 <div id="contact-form-section" className="contact-card">
                   <div className="contact-icon-badge contact-icon-email">
@@ -743,13 +691,13 @@ function App() {
                   </div>
                   <h3 className="contact-card-title">Send an Email</h3>
                   <p className="contact-card-desc">
-                    Send an official message to Jeffrey Kay&apos;s management team for bookings and media inquiries.
+                    Send an official message to JeffreyK&apos;s management team for bookings and media inquiries.
                   </p>
 
                   {submitted && (
                     <div className="alert-success">
                       <CheckCircle size={18} />
-                      <span>Thank you! Your message was sent successfully to Jeffrey Kay&apos;s team.</span>
+                      <span>Thank you! Your message was sent successfully to JeffreyK&apos;s team.</span>
                     </div>
                   )}
 
@@ -831,9 +779,9 @@ function App() {
           <div className="footer-grid">
             {/* Column 1: Artist Brand */}
             <div>
-              <div className="footer-brand-title">Jeffrey Kay</div>
+              <div className="footer-brand-title">JeffreyK</div>
               <p className="footer-brand-desc">
-                Official website of South African Gospel artist Jeffrey Kay. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
+                Official website of South African Gospel artist JeffreyK. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
               </p>
 
               {/* Developer & Company Credits */}
@@ -853,7 +801,7 @@ function App() {
             <div>
               <div className="footer-column-title">Navigation</div>
               <ul className="footer-links">
-                <li><button onClick={() => handleTabChange('about')} className="footer-link-btn">About Jeffrey Kay</button></li>
+                <li><button onClick={() => handleTabChange('about')} className="footer-link-btn">About JeffreyK</button></li>
                 <li><button onClick={() => handleTabChange('socials')} className="footer-link-btn">Social Media Hub</button></li>
                 <li><button onClick={() => handleTabChange('works')} className="footer-link-btn">Gospel Music &amp; Snippets</button></li>
                 <li><button onClick={() => handleTabChange('contact')} className="footer-link-btn">WhatsApp &amp; Email Contact</button></li>
@@ -885,7 +833,7 @@ function App() {
 
           <div className="footer-bottom">
             <div>
-              &copy; {new Date().getFullYear()} Jeffrey Kay. All rights reserved. Website Template by <strong>valambyaT3ch</strong>.
+              &copy; {new Date().getFullYear()} JeffreyK. All rights reserved. Website Template by <strong>valambyaT3ch</strong>.
             </div>
             <div>
               Contact Developer: <a href="mailto:valambyat3ch@gmail.com" style={{ color: 'var(--dusty-blue-light)', textDecoration: 'none' }}>valambyat3ch@gmail.com</a>

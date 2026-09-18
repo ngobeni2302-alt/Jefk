@@ -1,6 +1,12 @@
-# 🎵 Jeffrey Kay — Official Gospel Artist Website
+# 🎵 JeffreyK — Official Gospel Artist Website
 
-The official responsive portfolio website for **Jeffrey Kay**, a Gospel singer, songwriter, and worship leader from **South Africa**. Built and developed by **valambyaT3ch**.
+The official responsive portfolio website for **JeffreyK**, a Gospel singer, songwriter, and worship leader from **South Africa**. Built and developed by **valambyaT3ch**.
+
+---
+
+## 🌐 Live Demo
+
+Visit the deployed website here: **[jefk.vercel.app](https://jefk.vercel.app/)**
 
 ---
 
@@ -14,7 +20,7 @@ The official responsive portfolio website for **Jeffrey Kay**, a Gospel singer, 
 
 ## 🌟 Key Sections
 
-1. **About Jeffrey Kay**:
+1. **About JeffreyK**:
    - Bio, origin (South Africa), genre (Gospel Music), active year, and official photo placeholder.
 2. **Social Media Hub**:
    - Spotify, Instagram, YouTube, WhatsApp, X (Twitter), Apple Music, SoundCloud, and TikTok.
