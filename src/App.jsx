@@ -15,7 +15,6 @@ import {
   CheckCircle,
   ArrowRight,
   Share2,
-  Info,
   ChevronLeft,
   ChevronRight,
   X,
@@ -141,8 +140,9 @@ function App() {
 
   useEffect(() => {
     updateIndicator(activeTab)
-    window.addEventListener('resize', () => updateIndicator(activeTab))
-    return () => window.removeEventListener('resize', () => updateIndicator(activeTab))
+    const handleResize = () => updateIndicator(activeTab)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [activeTab])
 
   // Handle 30-Second Snippet Playback Simulation

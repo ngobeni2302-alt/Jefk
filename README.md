@@ -31,20 +31,29 @@ The official responsive portfolio website for **Jeffrey Kay**, a Gospel singer, 
 
 ### Step 1: Open Terminal in Project Directory
 ```bash
-cd /home/wethinkcode/Desktop/Jefk
+cd /home/mlambya/Desktop/Jefk
 ```
 
-### Step 2: Install Dependencies (if not already done)
+### Step 2: Use a supported Node.js version
+
+This project requires Node.js **18.0.0+**.
+Verify it with:
+
+```bash
+node --version
+```
+
+### Step 3: Install Dependencies (if not already done)
 ```bash
 npm install
 ```
 
-### Step 3: Start the Development Server
+### Step 4: Start the Development Server
 ```bash
 npm run dev
 ```
 
-### Step 4: Open in Web Browser
+### Step 5: Open in Web Browser
 Open: 👉 **[http://localhost:5173](http://localhost:5173)**
 
 ---
