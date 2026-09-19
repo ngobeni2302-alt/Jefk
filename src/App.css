@@ -363,6 +363,17 @@
   margin: 0 auto clamp(30px, 5vw, 50px) auto;
 }
 
+/* About heading directly above the about content */
+.about-title-left {
+  /* Increased font size for prominence */
+  font-size: clamp(30px, 7vw, 48px);
+  font-weight: 900;
+  color: var(--text-black);
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
 .section-tag {
   display: inline-block;
   background-color: var(--dusty-blue-light);
@@ -854,6 +865,14 @@
   gap: clamp(20px, 4vw, 32px);
 }
 
+/* When the contact grid has only one child, center and constrain its width */
+.contact-grid > :only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 720px;
+  width: 100%;
+}
+
 .contact-card {
   background-color: var(--bg-white);
   border: 1px solid var(--dusty-blue-border);
@@ -980,9 +999,11 @@
 }
 
 /* Footer Section */
+
 .footer {
-  background-color: var(--btn-black);
-  color: var(--bg-white);
+  /* Use theme-aware canvas so footer matches light/dark mode */
+  background-color: var(--bg-white);
+  color: var(--text-black);
   padding: clamp(40px, 6vw, 60px) 0 30px 0;
   margin-top: auto;
   border-top: 3px solid var(--dusty-blue-primary);
@@ -1000,11 +1021,11 @@
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
-  color: #FFFFFF;
+  color: var(--text-black);
 }
 
 .footer-brand-desc {
-  color: #94A3B8;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1.6;
   max-width: 360px;
@@ -1015,7 +1036,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--dusty-blue-light);
+  color: var(--text-black);
   margin-bottom: 14px;
 }
 
@@ -1028,7 +1049,7 @@
 
 .footer-link,
 .footer-link-btn {
-  color: #CBD5E1;
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 14px;
   background: none;
@@ -1045,8 +1066,8 @@
 }
 
 .company-branding-box {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--dusty-blue-border);
   padding: 16px;
   border-radius: var(--radius-md);
   margin-top: 16px;
@@ -1055,7 +1076,7 @@
 .company-name {
   font-size: 15px;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-black);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1063,7 +1084,7 @@
 
 .company-email {
   font-size: 13px;
-  color: var(--dusty-blue-light);
+  color: var(--text-muted);
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -1075,19 +1096,51 @@
 
 .company-email:hover {
   text-decoration: underline;
-  color: #FFFFFF;
+  color: var(--text-black);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--dusty-blue-border);
   padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  color: #94A3B8;
+  color: var(--text-muted);
   flex-wrap: wrap;
   gap: 12px;
+}
+
+/* Footer Social Icons */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--bg-surface);
+  color: var(--text-black);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-social-link:hover {
+  transform: translateY(-4px);
+  background-color: var(--dusty-blue-light);
+  color: var(--text-black);
 }
 
 /* Responsive Rules */

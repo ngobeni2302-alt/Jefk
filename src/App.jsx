@@ -44,6 +44,14 @@ function InstagramIcon({ size = 20, className = '' }) {
   )
 }
 
+function FacebookIcon({ size = 20, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07C1.86 17.12 5.92 21.22 11 22v-7.01H8.59v-2.92H11V9.41c0-2.4 1.42-3.72 3.58-3.72 1.04 0 2.13.18 2.13.18v2.34h-1.2c-1.18 0-1.55.74-1.55 1.5v1.8h2.64l-.42 2.92H15.98V22c5.08-.78 9.02-4.88 9.02-9.93z" />
+    </svg>
+  )
+}
+
 function YoutubeIcon({ size = 20, className = '' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -107,9 +115,8 @@ function App() {
 
   const tabs = [
     { id: 'about', label: '1. About JeffreyK', icon: User },
-    { id: 'socials', label: '2. Social Media Hub', icon: Share2 },
-    { id: 'works', label: '3. Gospel Music & Snippets', icon: Disc },
-    { id: 'contact', label: '4. Email Contact', icon: Mail }
+    { id: 'works', label: '2. Gospel Music & Snippets', icon: Disc },
+    { id: 'contact', label: '3. Email Contact', icon: Mail }
   ]
 
   const updateIndicator = (tabId) => {
@@ -414,10 +421,6 @@ function App() {
             <span className="theme-switch-label">{theme === 'dark' ? 'Dark ON' : 'Dark OFF'}</span>
           </div>
 
-          <button onClick={() => handleTabChange('contact')} className="btn btn-whatsapp">
-            <WhatsAppIcon size={18} />
-            <span className="btn-label">WhatsApp</span>
-          </button>
           <button onClick={() => handleTabChange('contact')} className="btn btn-black">
             <Mail size={16} />
             <span className="btn-label">Email Me</span>
@@ -484,6 +487,7 @@ function App() {
             <div className="container">
               <div className="hero-grid">
                 <div className="hero-content">
+                  <h2 className="about-title-left"><strong>JeffreyK</strong></h2>
                   <p className="hero-bio">
                     Jeffrey Sakhile Khumalo, known as <strong>JeffreyK</strong>, is a gospel artist from <strong>Kwa-Thema, Springs</strong>. Raised in a church family and shaped by theatre alongside Sipho Mnyakeni, his journey through trials led him back to God. Choosing gospel as a calling, his music is a testimony of faith and rebirth. <strong>JeffreyK – Reborn to Worship.</strong>
                   </p>
@@ -534,52 +538,7 @@ function App() {
           </section>
         )}
 
-        {/* TAB 2: SOCIAL MEDIA HUB */}
-        {activeTab === 'socials' && (
-          <section id="socials" className="section section-bg-alt">
-            <div className="container">
-              <div className="section-header">
-                <span className="section-tag">Connect &amp; Follow</span>
-                <h2 className="section-title">JeffreyK Social Hub</h2>
-                <p className="section-description">
-                  Explore official music channels, stream worship songs, and connect across all platforms.
-                </p>
-              </div>
-
-              <div className="socials-grid">
-                {socials.map((social, index) => {
-                  const IconComponent = social.icon
-                  return (
-                    <div key={index} className="social-card">
-                      <div>
-                        <div className="social-card-header">
-                          <div className="social-icon-wrapper">
-                            <IconComponent size={22} />
-                          </div>
-                          <span className="template-badge">Official Link</span>
-                        </div>
-                        <h3 className="social-handle">{social.handle}</h3>
-                        <div className="social-platform">{social.platform}</div>
-                        <p className="work-desc">{social.desc}</p>
-                      </div>
-
-                      <a
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-outline-dusty"
-                        style={{ marginTop: '16px', width: '100%' }}
-                      >
-                        <span>Visit {social.platform}</span>
-                        <ExternalLink size={14} />
-                      </a>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </section>
-        )}
+        {/* Socials page removed per request. Footer will contain social icon placeholders. */}
 
         {/* TAB 3: DISCOGRAPHY & WORKS WITH 30-SEC SNIPPET PLAYER */}
         {activeTab === 'works' && (
@@ -773,70 +732,42 @@ function App() {
         )}
       </main>
 
-      {/* Footer Section */}
+      {/* Footer Section (simplified) */}
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
-            {/* Column 1: Artist Brand */}
             <div>
               <div className="footer-brand-title">JeffreyK</div>
               <p className="footer-brand-desc">
                 Official website of South African Gospel artist JeffreyK. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
               </p>
+            </div>
 
-              {/* Developer & Company Credits */}
-              <div className="company-branding-box">
-                <div className="company-name">
-                  <Sparkles size={16} color="#5C7C8D" />
-                  Website Developed by valambyaT3ch
-                </div>
-                <a href="mailto:valambyat3ch@gmail.com" className="company-email">
-                  <Mail size={14} />
-                  valambyat3ch@gmail.com
+            <div className="footer-socials">
+              <div className="footer-column-title">Follow</div>
+              <div className="social-icons">
+                <a href="#" className="footer-social-link" aria-label="Facebook">
+                  <FacebookIcon size={20} />
+                </a>
+                <a href="https://www.tiktok.com/@jeffreykay81" className="footer-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                  <TikTokIcon size={20} />
+                </a>
+                <a href="#" className="footer-social-link" aria-label="Spotify">
+                  <SpotifyIcon size={20} />
+                </a>
+                <a href="#" className="footer-social-link" aria-label="YouTube Music">
+                  <YoutubeIcon size={20} />
+                </a>
+                <a href="#" className="footer-social-link" aria-label="Apple Music">
+                  <Disc size={20} />
                 </a>
               </div>
-            </div>
-
-            {/* Column 2: Quick Links */}
-            <div>
-              <div className="footer-column-title">Navigation</div>
-              <ul className="footer-links">
-                <li><button onClick={() => handleTabChange('about')} className="footer-link-btn">About JeffreyK</button></li>
-                <li><button onClick={() => handleTabChange('socials')} className="footer-link-btn">Social Media Hub</button></li>
-                <li><button onClick={() => handleTabChange('works')} className="footer-link-btn">Gospel Music &amp; Snippets</button></li>
-                <li><button onClick={() => handleTabChange('contact')} className="footer-link-btn">WhatsApp &amp; Email Contact</button></li>
-              </ul>
-            </div>
-
-            {/* Column 3: Contact Info Recap */}
-            <div>
-              <div className="footer-column-title">Direct Contact</div>
-              <ul className="footer-links">
-                <li>
-                  <button onClick={() => handleTabChange('contact')} className="footer-link-btn" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <WhatsAppIcon size={16} /> WhatsApp Chat
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleTabChange('contact')} className="footer-link-btn" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Mail size={16} /> Send Email
-                  </button>
-                </li>
-                <li>
-                  <a href="mailto:valambyat3ch@gmail.com" className="footer-link" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Globe size={16} /> Tech Partner: valambyaT3ch
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
 
           <div className="footer-bottom">
             <div>
-              &copy; {new Date().getFullYear()} JeffreyK. All rights reserved. Website Template by <strong>valambyaT3ch</strong>.
-            </div>
-            <div>
-              Contact Developer: <a href="mailto:valambyat3ch@gmail.com" style={{ color: 'var(--dusty-blue-light)', textDecoration: 'none' }}>valambyat3ch@gmail.com</a>
+              &copy; {new Date().getFullYear()} JeffreyK. All rights reserved.
             </div>
           </div>
         </div>

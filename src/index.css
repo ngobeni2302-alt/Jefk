@@ -99,7 +99,8 @@
 
 html, body {
   font-family: var(--font-family);
-  background-color: var(--bg-surface);
+  /* Use --bg-white so light/dark modes toggle entire page background */
+  background-color: var(--bg-white);
   color: var(--text-dark);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
