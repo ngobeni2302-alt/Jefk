@@ -215,6 +215,12 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) return
+    // Open user's mail client prefilled to the artist email
+    const to = 'jeffreykhumalo@gmail.com'
+    const subject = encodeURIComponent(`${formData.subject} - ${formData.name}`)
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
+    const mailto = `mailto:${to}?subject=${subject}&body=${body}`
+    window.location.href = mailto
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
@@ -488,6 +494,24 @@ function App() {
               <div className="hero-grid">
                 <div className="hero-content">
                   <h2 className="about-title-left"><strong>JeffreyK</strong></h2>
+                </div>
+
+                {/* Photo comes next per requested order */}
+                <div className="hero-image-container">
+                  <div className="hero-image-card">
+                    <img
+                      src="/jeffrey_kay.jpg"
+                      alt="JeffreyK - Ngipha'Mandla Cover"
+                      className="hero-artist-img"
+                    />
+                    <div className="hero-image-caption" style={{ marginTop: '12px' }}>
+                      JeffreyK — Ngipha&apos;Mandla
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bio and actions after photo */}
+                <div className="hero-content">
                   <p className="hero-bio">
                     Jeffrey Sakhile Khumalo, known as <strong>JeffreyK</strong>, is a gospel artist from <strong>Kwa-Thema, Springs</strong>. Raised in a church family and shaped by theatre alongside Sipho Mnyakeni, his journey through trials led him back to God. Choosing gospel as a calling, his music is a testimony of faith and rebirth. <strong>JeffreyK – Reborn to Worship.</strong>
                   </p>
@@ -517,20 +541,6 @@ function App() {
                       <Phone size={16} />
                       Book / Contact Artist
                     </button>
-                  </div>
-                </div>
-
-                {/* Updated Real Photo of JeffreyK */}
-                <div className="hero-image-container">
-                  <div className="hero-image-card">
-                    <img
-                      src="/jeffrey_kay.jpg"
-                      alt="JeffreyK - Ngipha'Mandla Cover"
-                      className="hero-artist-img"
-                    />
-                    <div className="hero-image-caption" style={{ marginTop: '12px' }}>
-                      JeffreyK — Ngipha&apos;Mandla
-                    </div>
                   </div>
                 </div>
               </div>
@@ -718,7 +728,7 @@ function App() {
 
                   <div style={{ marginTop: '16px', textAlign: 'center' }}>
                     <a
-                      href="mailto:artist@example.com?subject=Jeffrey%20Kay%20Gospel%20Inquiry"
+                      href="mailto:jeffreykhumalo@gmail.com?subject=Jeffrey%20Kay%20Gospel%20Inquiry"
                       className="company-email"
                       style={{ color: 'var(--dusty-blue-dark)', fontSize: '13px' }}
                     >
@@ -746,19 +756,19 @@ function App() {
             <div className="footer-socials">
               <div className="footer-column-title">Follow</div>
               <div className="social-icons">
-                <a href="#" className="footer-social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61589357584986" className="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon size={20} />
                 </a>
                 <a href="https://www.tiktok.com/@jeffreykay81" className="footer-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                   <TikTokIcon size={20} />
                 </a>
-                <a href="#" className="footer-social-link" aria-label="Spotify">
+                <a href="https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ" className="footer-social-link" aria-label="Spotify" target="_blank" rel="noopener noreferrer">
                   <SpotifyIcon size={20} />
                 </a>
-                <a href="#" className="footer-social-link" aria-label="YouTube Music">
+                <a href="https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr" className="footer-social-link" aria-label="YouTube Music" target="_blank" rel="noopener noreferrer">
                   <YoutubeIcon size={20} />
                 </a>
-                <a href="#" className="footer-social-link" aria-label="Apple Music">
+                <a href="https://music.apple.com/us/artist/jeffrey-kay/1843324363" className="footer-social-link" aria-label="Apple Music" target="_blank" rel="noopener noreferrer">
                   <Disc size={20} />
                 </a>
               </div>
