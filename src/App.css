@@ -409,6 +409,19 @@
   align-items: center;
 }
 
+/* Center hero grid content similar to the contact layout */
+.hero-grid {
+  justify-items: center;
+}
+
+/* When the hero grid collapses to a single child, center and constrain its width */
+.hero-grid > :only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 720px;
+  width: 100%;
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -575,6 +588,18 @@
 .works-grid {
   display: grid;
   gap: 24px;
+}
+
+/* Make works grid items center-aligned and constrain single-column width like contact */
+.works-grid {
+  justify-items: center;
+}
+
+.works-grid > :only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 920px;
+  width: 100%;
 }
 
 .work-card {
