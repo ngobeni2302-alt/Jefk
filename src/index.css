@@ -70,6 +70,18 @@
   border-color: #334155;
 }
 
+[data-theme="dark"] .alert-error {
+  background-color: #450A0A;
+  color: #FCA5A5;
+  border-color: #991B1B;
+}
+
+[data-theme="dark"] .form-required-hint {
+  background-color: #182234;
+  border-color: #334155;
+  color: #94A3B8;
+}
+
 [data-theme="dark"] .template-notice {
   background-color: #1E293B;
   color: #F8FAFC;
@@ -86,7 +98,7 @@
   border-bottom-color: #334155;
 }
 
-[data-theme="dark"] .tab-sliding-indicator {
+[data-theme="dark"] .system-tab-btn.active::after {
   background-color: #F8FAFC;
 }
 

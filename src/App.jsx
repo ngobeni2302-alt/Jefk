@@ -19,20 +19,14 @@ import {
   ChevronRight,
   X,
   Volume2,
-  Sun,
-  Moon
+  AlertCircle,
+  Camera,
+  Maximize2,
+  Film
 } from 'lucide-react'
 import './App.css'
 
 // Vector Brand Icons
-
-function WhatsAppIcon({ size = 20, className = '' }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.166 5.289-1.385c1.472.802 3.13 1.224 4.78 1.225h.005c5.505 0 9.988-4.478 9.989-9.985 0-2.667-1.037-5.176-2.925-7.065A9.916 9.916 0 0 0 12.012 2zm.005 16.347h-.004a8.283 8.283 0 0 1-4.225-1.16l-.303-.18-3.14.821.838-3.056-.197-.314a8.261 8.261 0 0 1-1.266-4.474c0-4.569 3.719-8.288 8.29-8.288 2.213 0 4.293.862 5.858 2.428a8.23 8.23 0 0 1 2.424 5.86c0 4.57-3.718 8.288-8.289 8.288zm4.542-6.208c-.249-.124-1.472-.726-1.701-.809-.228-.083-.394-.124-.56.124-.166.249-.643.809-.788.975-.145.166-.29.186-.539.062-.249-.124-1.052-.387-2.004-1.236-.741-.661-1.241-1.477-1.386-1.726-.145-.249-.015-.383.109-.507.112-.112.249-.29.373-.435.124-.145.166-.249.249-.415.083-.166.042-.311-.021-.435-.062-.124-.56-1.348-.767-1.846-.202-.486-.407-.42-.56-.428l-.477-.008c-.166 0-.435.062-.663.311-.228.249-.871.85-.871 2.073 0 1.223.891 2.405 1.015 2.571.124.166 1.752 2.675 4.246 3.753.593.256 1.056.409 1.417.524.596.19 1.138.163 1.566.099.478-.071 1.472-.601 1.68-1.182.207-.581.207-1.078.145-1.182-.062-.104-.228-.166-.477-.29z" />
-    </svg>
-  )
-}
 
 function InstagramIcon({ size = 20, className = '' }) {
   return (
@@ -46,24 +40,36 @@ function InstagramIcon({ size = 20, className = '' }) {
 
 function FacebookIcon({ size = 20, className = '' }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07C1.86 17.12 5.92 21.22 11 22v-7.01H8.59v-2.92H11V9.41c0-2.4 1.42-3.72 3.58-3.72 1.04 0 2.13.18 2.13.18v2.34h-1.2c-1.18 0-1.55.74-1.55 1.5v1.8h2.64l-.42 2.92H15.98V22c5.08-.78 9.02-4.88 9.02-9.93z" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#1877F2" />
+      <path
+        d="M15.8 12.05h-2.5v9.55h-3.95v-9.55H7.5V8.8h1.85V6.44c0-2.43 1.48-3.76 3.65-3.76 1.04 0 2.14.19 2.14.19v2.35h-1.21c-1.2 0-1.58.75-1.58 1.51V8.8h2.65l-.42 3.25z"
+        fill="#FFFFFF"
+      />
     </svg>
   )
 }
 
 function YoutubeIcon({ size = 20, className = '' }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"
+        fill="#FF0000"
+      />
+      <polygon points="9.6,15.5 15.8,12 9.6,8.5" fill="#FFFFFF" />
     </svg>
   )
 }
 
 function SpotifyIcon({ size = 20, className = '' }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.899 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.019zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.841c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.18-.1.2-1.2-.42-.18-.6.42-1.2 1.02-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#1DB954" />
+      <path
+        d="M17.5 17.1c-.2.3-.6.4-1 .2-2.7-1.6-6.1-2-10.1-1.1-.4.1-.7-.2-.8-.5-.1-.4.2-.7.5-.8 4.4-1 8.1-.6 11.2 1.3.4.1.5.6.2.9zm1.4-3.1c-.3.4-.8.5-1.2.3-3.1-1.9-7.8-2.5-11.5-1.3-.4.1-1-.1-1.1-.6-.1-.5.1-1 .6-1.1 4.2-1.3 9.4-.6 13 1.6.4.1.5.7.2 1.1zm.1-3.3c-3.7-2.2-9.8-2.4-13.4-1.3-.6.2-1.2-.2-1.4-.7-.2-.6.2-1.2.7-1.4 4.1-1.2 10.9-1 15.2 1.6.5.3.7 1 .4 1.5-.3.4-1 .6-1.5.3z"
+        fill="#000000"
+      />
     </svg>
   )
 }
@@ -78,8 +84,43 @@ function XIcon({ size = 20, className = '' }) {
 
 function TikTokIcon({ size = 20, className = '' }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .56.04.83.12V9.38a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 10.74 4.5 6.3 6.3 0 0 0 2.05-4.57V8.5a8.27 8.27 0 0 0 4.8 1.53V6.58a4.85 4.85 0 0 1-1-.11z"/>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="6" fill="#000000" />
+      <g transform="translate(2, 2) scale(0.833)">
+        <path
+          d="M17.84 6.13a4.7 4.7 0 0 1-3.66-4.13V2h-3.35v13.27a2.8 2.8 0 0 1-5.05 1.69 2.8 2.8 0 0 1 2.24-4.5c.28 0 .54.04.8.12V9.15a6.15 6.15 0 0 0-.97-.08A6.16 6.16 0 0 0 1.7 15.23a6.16 6.16 0 0 0 10.43 4.37 6.12 6.12 0 0 0 1.99-4.44V8.04a8.03 8.03 0 0 0 4.66 1.48V6.24c-.31 0-.62-.04-.94-.11z"
+          fill="#00F2FE"
+          transform="translate(-0.8, -0.6)"
+        />
+        <path
+          d="M17.84 6.13a4.7 4.7 0 0 1-3.66-4.13V2h-3.35v13.27a2.8 2.8 0 0 1-5.05 1.69 2.8 2.8 0 0 1 2.24-4.5c.28 0 .54.04.8.12V9.15a6.15 6.15 0 0 0-.97-.08A6.16 6.16 0 0 0 1.7 15.23a6.16 6.16 0 0 0 10.43 4.37 6.12 6.12 0 0 0 1.99-4.44V8.04a8.03 8.03 0 0 0 4.66 1.48V6.24c-.31 0-.62-.04-.94-.11z"
+          fill="#FE2C55"
+          transform="translate(0.8, 0.6)"
+        />
+        <path
+          d="M17.84 6.13a4.7 4.7 0 0 1-3.66-4.13V2h-3.35v13.27a2.8 2.8 0 0 1-5.05 1.69 2.8 2.8 0 0 1 2.24-4.5c.28 0 .54.04.8.12V9.15a6.15 6.15 0 0 0-.97-.08A6.16 6.16 0 0 0 1.7 15.23a6.16 6.16 0 0 0 10.43 4.37 6.12 6.12 0 0 0 1.99-4.44V8.04a8.03 8.03 0 0 0 4.66 1.48V6.24c-.31 0-.62-.04-.94-.11z"
+          fill="#FFFFFF"
+        />
+      </g>
+    </svg>
+  )
+}
+
+function AppleMusicIcon({ size = 20, className = '' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="appleMusicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FA2D48" />
+          <stop offset="50%" stopColor="#FB3C56" />
+          <stop offset="100%" stopColor="#D8183B" />
+        </linearGradient>
+      </defs>
+      <rect width="24" height="24" rx="5.5" fill="url(#appleMusicGrad)" />
+      <path
+        d="M17.4 4.9c-.2-.1-.5-.1-.7 0l-7.3 1.9c-.4.1-.7.5-.7.9v8.4c-.5-.3-1.1-.5-1.7-.5-1.7 0-3 1.1-3 2.5s1.3 2.5 3 2.5c1.6 0 2.9-1 3-2.3v-7.5l6-1.6v5.3c-.5-.3-1.1-.5-1.7-.5-1.7 0-3 1.1-3 2.5s1.3 2.5 3 2.5c1.6 0 2.9-1 3-2.3V5.6c0-.4-.3-.7-.6-.7z"
+        fill="#FFFFFF"
+      />
     </svg>
   )
 }
@@ -88,53 +129,22 @@ function App() {
   const [activeTab, setActiveTab] = useState('about')
   const [isFading, setIsFading] = useState(false)
 
-  // Theme State (Light vs Dark Mode)
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'light'
-  })
-
-  const toggleTheme = () => {
-    const nextTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(nextTheme)
-    localStorage.setItem('theme', nextTheme)
-  }
-
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
+    // Ensure clean default light theme
+    document.documentElement.removeAttribute('data-theme')
+    localStorage.removeItem('theme')
+  }, [])
 
   const tabsListRef = useRef(null)
-  const tabRefs = useRef({})
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
-
-  // Audio Snippet & Platform Modal States
-  const [playingTrackId, setPlayingTrackId] = useState(null)
-  const [snippetProgress, setSnippetProgress] = useState(0)
-  const [platformModalTrack, setPlatformModalTrack] = useState(null)
-  const snippetTimerRef = useRef(null)
 
   const tabs = [
-    { id: 'about', label: '1. About JeffreyK', icon: User },
+    { id: 'about', label: '1. About Jeffery Kay', icon: User },
     { id: 'works', label: '2. Gospel Music & Snippets', icon: Disc },
     { id: 'contact', label: '3. Email Contact', icon: Mail }
   ]
 
-  const updateIndicator = (tabId) => {
-    const currentTabEl = tabRefs.current[tabId]
-    const containerEl = tabsListRef.current
-    if (currentTabEl && containerEl) {
-      const tabRect = currentTabEl.getBoundingClientRect()
-      const containerRect = containerEl.getBoundingClientRect()
-      setIndicatorStyle({
-        left: tabRect.left - containerRect.left + containerEl.scrollLeft,
-        width: tabRect.width
-      })
-    }
-  }
-
   const handleTabChange = (newTabId) => {
     if (newTabId === activeTab) return
-    updateIndicator(newTabId)
     setIsFading(true)
 
     setTimeout(() => {
@@ -145,35 +155,18 @@ function App() {
     }, 80)
   }
 
-  useEffect(() => {
-    updateIndicator(activeTab)
-    const handleResize = () => updateIndicator(activeTab)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [activeTab])
+  // Lightbox & Streaming Modal States
+  const [photoModalOpen, setPhotoModalOpen] = useState(null)
+  const [platformModalTrack, setPlatformModalTrack] = useState(null)
 
-  // Handle 30-Second Snippet Playback Simulation
-  const toggleSnippet = (trackId) => {
-    if (playingTrackId === trackId) {
-      setPlayingTrackId(null)
-      clearInterval(snippetTimerRef.current)
-      setSnippetProgress(0)
-    } else {
-      setPlayingTrackId(trackId)
-      setSnippetProgress(0)
-      clearInterval(snippetTimerRef.current)
-
-      let elapsed = 0
-      snippetTimerRef.current = setInterval(() => {
-        elapsed += 1
-        setSnippetProgress((elapsed / 30) * 100)
-        if (elapsed >= 30) {
-          clearInterval(snippetTimerRef.current)
-          setPlayingTrackId(null)
-          setSnippetProgress(0)
-        }
-      }, 1000)
-    }
+  // Pause other videos when one starts playing
+  const handleVideoPlay = (e) => {
+    const allVideos = document.querySelectorAll('.snippet-video-player')
+    allVideos.forEach((vid) => {
+      if (vid !== e.target) {
+        vid.pause()
+      }
+    })
   }
 
   // Keyboard navigation
@@ -207,31 +200,41 @@ function App() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Gospel Booking Inquiry',
+    subject: '',
     message: ''
   })
+  const [formError, setFormError] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!formData.name || !formData.email || !formData.message) return
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.subject.trim() ||
+      !formData.message.trim()
+    ) {
+      setFormError('Please fill in all required spaces marked with * before sending.')
+      return
+    }
+    setFormError('')
     // Open user's mail client prefilled to the artist email
     const to = 'jeffreykhumalo@gmail.com'
     const subject = encodeURIComponent(`${formData.subject} - ${formData.name}`)
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\n${formData.message}`)
     const mailto = `mailto:${to}?subject=${subject}&body=${body}`
     window.location.href = mailto
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
-      setFormData({ name: '', email: '', subject: 'Gospel Booking Inquiry', message: '' })
+      setFormData({ name: '', email: '', subject: '', message: '' })
     }, 5000)
   }
 
   const socials = [
     {
       platform: 'Spotify',
-      handle: 'JeffreyK',
+      handle: 'Jeffery Kay',
       url: 'https://spotify.com',
       icon: SpotifyIcon,
       desc: 'Stream gospel tracks & latest worship releases'
@@ -245,7 +248,7 @@ function App() {
     },
     {
       platform: 'YouTube Music',
-      handle: 'JeffreyK Gospel',
+      handle: 'Jeffery Kay Gospel',
       url: 'https://music.youtube.com/watch?v=Ufq9mRs5pmw&si=9Hjf8dZpbU1v9krn',
       icon: YoutubeIcon,
       desc: 'Official gospel music videos & live ministry'
@@ -258,14 +261,14 @@ function App() {
     },
     {
       platform: 'Apple Music',
-      handle: 'JeffreyK',
-      url: 'https://music.apple.com',
-      icon: Disc,
+      handle: 'Jeffery Kay',
+      url: 'https://music.apple.com/us/artist/jeffrey-kay/1843324363',
+      icon: AppleMusicIcon,
       desc: 'Listen to gospel albums in high fidelity'
     },
     {
       platform: 'SoundCloud',
-      handle: 'JeffreyK Gospel',
+      handle: 'Jeffery Kay Gospel',
       url: 'https://soundcloud.com',
       icon: Share2,
       desc: 'Acoustic worship sessions & live recordings'
@@ -279,35 +282,88 @@ function App() {
     }
   ]
 
-  const works = [
+  const mediaItems = [
     {
-      id: 'track-1',
-      title: 'Ngipha\'Mandla',
-      category: 'Official Gospel Single',
-      desc: 'A powerful South African gospel worship song by JeffreyK asking for divine strength and grace.',
-      year: '2026',
-      youtubeUrl: 'https://music.youtube.com/watch?v=Ufq9mRs5pmw&si=9Hjf8dZpbU1v9krn',
-      youtubeEmbedId: 'Ufq9mRs5pmw',
-      coverImg: '/jeffrey_kay.jpg',
-      spotifyUrl: 'https://open.spotify.com/search/Jeffrey%20Kay%20Ngipha%27Mandla',
-      appleUrl: 'https://music.apple.com/search?term=Jeffrey%20Kay%20Ngipha%27Mandla'
+      id: 'media-video-1',
+      type: 'video',
+      title: 'Jeffrey Kay - Isikhali',
+      category: '30-Sec Gospel Snippet',
+      duration: '0:30',
+      src: '/media/InShot_20260923_072509435.mp4',
+      desc: '30-second official gospel snippet showcasing vocal worship and spiritual devotion.'
     },
     {
-      id: 'track-2',
-      title: 'JeffreyK - Gospel Worship Live',
-      category: 'Live Ministry Performance',
-      desc: 'Spirit-filled live worship performance bringing inspirational gospel praise to audiences everywhere.',
-      year: '2026',
-      youtubeUrl: 'https://music.youtube.com/watch?v=_TxYhEzLCXs&si=HVsFiPYsUngqra2n',
-      youtubeEmbedId: '_TxYhEzLCXs',
-      coverImg: '/jeffrey_kay.jpg',
-      spotifyUrl: 'https://open.spotify.com/search/Jeffrey%20Kay',
-      appleUrl: 'https://music.apple.com/search?term=Jeffrey%20Kay'
+      id: 'media-video-2',
+      type: 'video',
+      title: 'Jeffrey Kay - Ngiphamandla',
+      category: '30-Sec Gospel Snippet',
+      duration: '0:30',
+      src: '/media/InShot_20260923_073418783.mp4',
+      desc: 'Uplifting gospel ministry snippet highlighting the journey back to God.'
+    },
+    {
+      id: 'media-video-3',
+      type: 'video',
+      title: 'Jeffrey Kay - Praise And Worship Session',
+      category: '35-Sec Gospel Snippet',
+      duration: '0:35',
+      src: '/media/InShot_20260923_074214149.mp4',
+      desc: 'Passionate praise and worship session from Jeffery Kay.'
+    },
+    {
+      id: 'media-video-4',
+      type: 'video',
+      title: 'Live Ministry Session — Worship Recording',
+      category: 'Live Ministry Video',
+      duration: '1:25',
+      src: '/media/808cb8ed654945c8a81ac237effd3de7.mp4',
+      desc: 'Praise and Worship at Oak Of Glory Ministries, come join him every Sunday from 9am to 12pm at Oak Of Glory Ministries'
+    },
+    {
+      id: 'media-video-5',
+      type: 'video',
+      title: 'Jeffrey Kay - Mzansi Khyalami',
+      category: '31-Sec Gospel Snippet',
+      duration: '0:31',
+      src: '/media/jeffrey_kay_mzansi_khyalami.mp4',
+      desc: 'Jeffrey Kay performing live at a theatre part of the Mzansi Khyalami group with the likes of Sipho Mnyakeni in tribute to the Legendary Chris Hani.'
+    },
+    {
+      id: 'media-photo-1',
+      type: 'photo',
+      title: 'Jeffery Kay — Live Stage Ministry',
+      category: 'Live Stage Photography',
+      duration: 'High-Res Photo',
+      src: '/media/jeffrey_kay_stage_performance.jpg',
+      desc: 'Jeffrey Kay live on stage showcasing his talent alongside with his passion.'
     }
   ]
 
   return (
     <div className="app-container">
+      {/* Photo Lightbox Modal */}
+      {photoModalOpen && (
+        <div className="modal-overlay" onClick={() => setPhotoModalOpen(null)}>
+          <div className="photo-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="photo-modal-header">
+              <div>
+                <div className="modal-tag">Live Ministry Photography</div>
+                <h3 className="modal-title">Jeffery Kay — Live Stage Ministry</h3>
+              </div>
+              <button className="modal-close-btn" onClick={() => setPhotoModalOpen(null)} aria-label="Close photo view">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="photo-modal-body">
+              <img src={photoModalOpen} alt="Jeffery Kay Live on Stage" className="photo-modal-img" />
+            </div>
+            <div className="photo-modal-footer">
+              <p>Jeffery Kay ministering live on stage • Reborn to Worship • Springs, South Africa</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Platform Selection Modal */}
       {platformModalTrack && (
         <div className="modal-overlay" onClick={() => setPlatformModalTrack(null)}>
@@ -323,7 +379,7 @@ function App() {
             </div>
 
             <p className="modal-description">
-              Choose your preferred music streaming service below to open <strong>{platformModalTrack.title}</strong> by JeffreyK:
+              Choose your preferred music streaming service below to open <strong>{platformModalTrack.title}</strong> by Jeffery Kay:
             </p>
 
             <div className="platform-options-grid">
@@ -366,26 +422,10 @@ function App() {
                 className="platform-option-btn platform-apple"
               >
                 <div className="platform-btn-left">
-                  <Disc size={24} />
+                  <AppleMusicIcon size={24} />
                   <div>
                     <div className="platform-name">Apple Music</div>
                     <div className="platform-sub">Stream High Quality Audio</div>
-                  </div>
-                </div>
-                <ExternalLink size={16} />
-              </a>
-
-              <a
-                href={`https://wa.me/27000000000?text=Hi%20Jeffrey%20Kay%2C%20I'm%20listening%20to%20${encodeURIComponent(platformModalTrack.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="platform-option-btn platform-whatsapp-modal"
-              >
-                <div className="platform-btn-left">
-                  <WhatsAppIcon size={24} />
-                  <div>
-                    <div className="platform-name">WhatsApp Direct</div>
-                    <div className="platform-sub">Request Track / Connect with Artist</div>
                   </div>
                 </div>
                 <ExternalLink size={16} />
@@ -405,28 +445,10 @@ function App() {
       <header className="navbar">
         <div className="nav-brand">
           <div className="brand-icon">JK</div>
-          <span className="brand-name">JeffreyK</span>
+          <span className="brand-name">Jeffery Kay</span>
         </div>
 
         <div className="nav-actions">
-          {/* Physical Sliding ON / OFF Theme Switch */}
-          <div className="theme-switch-control">
-            <Sun size={15} className={`theme-switch-icon ${theme === 'light' ? 'active' : ''}`} />
-            <button
-              type="button"
-              role="switch"
-              aria-checked={theme === 'dark'}
-              onClick={toggleTheme}
-              className={`toggle-switch-track ${theme === 'dark' ? 'is-on' : 'is-off'}`}
-              title={`Switch to ${theme === 'light' ? 'Dark Mode (ON)' : 'Light Mode (OFF)'}`}
-              aria-label="Dark Mode Toggle Switch"
-            >
-              <span className="toggle-switch-thumb"></span>
-            </button>
-            <Moon size={15} className={`theme-switch-icon ${theme === 'dark' ? 'active' : ''}`} />
-            <span className="theme-switch-label">{theme === 'dark' ? 'Dark ON' : 'Dark OFF'}</span>
-          </div>
-
           <button onClick={() => handleTabChange('contact')} className="btn btn-black">
             <Mail size={16} />
             <span className="btn-label">Email Me</span>
@@ -456,7 +478,6 @@ function App() {
                 return (
                   <button
                     key={tab.id}
-                    ref={(el) => (tabRefs.current[tab.id] = el)}
                     role="tab"
                     aria-selected={isActive}
                     tabIndex={isActive ? 0 : -1}
@@ -468,14 +489,6 @@ function App() {
                   </button>
                 )
               })}
-
-              <div
-                className="tab-sliding-indicator"
-                style={{
-                  transform: `translateX(${indicatorStyle.left}px)`,
-                  width: `${indicatorStyle.width}px`
-                }}
-              />
             </div>
 
             <button className="chevron-btn chevron-right" onClick={() => scrollTabs('right')} aria-label="Scroll right">
@@ -487,33 +500,35 @@ function App() {
 
       {/* Dynamic Main Content Container */}
       <main className={`content-transition-area ${isFading ? 'fading' : ''}`}>
-        {/* TAB 1: ABOUT JEFFREY KAY */}
+        {/* TAB 1: ABOUT JEFFERY KAY */}
         {activeTab === 'about' && (
           <section id="about" className="section">
             <div className="container">
-              <div className="hero-grid">
-                <div className="hero-content">
-                  <h2 className="about-title-left"><strong>JeffreyK</strong></h2>
+              <div className="home-centered-wrapper">
+                {/* 1. First comes the title */}
+                <div className="home-title-section">
+                  <span className="section-tag">South African Gospel Artist</span>
+                  <h1 className="hero-heading">Jeffery Kay</h1>
                 </div>
 
-                {/* Photo comes next per requested order */}
+                {/* 2. Then comes the photo */}
                 <div className="hero-image-container">
                   <div className="hero-image-card">
                     <img
                       src="/jeffrey_kay.jpg"
-                      alt="JeffreyK - Ngipha'Mandla Cover"
+                      alt="Jeffery Kay - Ngipha'Mandla Cover"
                       className="hero-artist-img"
                     />
                     <div className="hero-image-caption" style={{ marginTop: '12px' }}>
-                      JeffreyK — Ngipha&apos;Mandla
+                      Jeffery Kay — Ngipha&apos;Mandla
                     </div>
                   </div>
                 </div>
 
-                {/* Bio and actions after photo */}
-                <div className="hero-content">
+                {/* 3. Then comes the bio */}
+                <div className="hero-bio-section">
                   <p className="hero-bio">
-                    Jeffrey Sakhile Khumalo, known as <strong>JeffreyK</strong>, is a gospel artist from <strong>Kwa-Thema, Springs</strong>. Raised in a church family and shaped by theatre alongside Sipho Mnyakeni, his journey through trials led him back to God. Choosing gospel as a calling, his music is a testimony of faith and rebirth. <strong>JeffreyK – Reborn to Worship.</strong>
+                    Jeffery Sakhile Khumalo, known as <strong>Jeffery Kay</strong>, is a gospel artist from <strong>Kwa-Thema, Springs</strong>. Raised in a church family and shaped by theatre alongside Sipho Mnyakeni, with whom he once performed in a group called Mzansi Khayalami, his journey through trials led him back to God. Choosing gospel as a calling, his music is a testimony of faith and rebirth. <strong>Jeffery Kay – Reborn to Worship.</strong>
                   </p>
 
                   <div className="hero-stats">
@@ -534,7 +549,7 @@ function App() {
                   <div className="hero-actions">
                     <button onClick={() => handleTabChange('works')} className="btn btn-black">
                       <Music size={16} />
-                      Listen to Ngipha&apos;Mandla
+                      Watch Gospel Snippets &amp; Videos
                       <ArrowRight size={16} />
                     </button>
                     <button onClick={() => handleTabChange('contact')} className="btn btn-outline-dusty">
@@ -548,99 +563,133 @@ function App() {
           </section>
         )}
 
-        {/* Socials page removed per request. Footer will contain social icon placeholders. */}
-
-        {/* TAB 3: DISCOGRAPHY & WORKS WITH 30-SEC SNIPPET PLAYER */}
+        {/* TAB 2: GOSPEL MUSIC & SNIPPETS */}
         {activeTab === 'works' && (
           <section id="works" className="section">
             <div className="container">
               <div className="section-header">
-                <span className="section-tag">Gospel Discography</span>
-                <h2 className="section-title">Featured Gospel Music &amp; Snippets</h2>
+                <span className="section-tag">Official Media &amp; Ministry</span>
+                <h2 className="section-title">Gospel Music &amp; Snippets</h2>
                 <p className="section-description">
-                  Listen to 30-second audio snippets right on the site or select your favorite streaming platform to listen in full.
+                  Watch official video snippets, live praise sessions, and stage photography from Jeffery Kay.
                 </p>
               </div>
 
-              <div className="works-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
-                {works.map((work) => {
-                  const isPlaying = playingTrackId === work.id
-                  return (
-                    <div key={work.id} className="work-card">
-                      <div className="work-cover-container">
-                        <img src={work.coverImg} alt={work.title} className="work-cover-img" />
-                        <div className="work-cover-overlay">
-                          <button
-                            onClick={() => toggleSnippet(work.id)}
-                            className={`snippet-play-btn ${isPlaying ? 'playing' : ''}`}
-                            aria-label={isPlaying ? 'Pause snippet' : 'Play 30 second snippet'}
-                          >
-                            {isPlaying ? <Pause size={28} /> : <Play size={28} style={{ marginLeft: '4px' }} />}
-                          </button>
+              <div className="works-centered-wrapper">
+                <div className="media-grid">
+                  {mediaItems.map((item) => {
+                    if (item.type === 'video') {
+                      return (
+                        <div key={item.id} className="media-card media-video-card">
+                          <div className="media-player-container">
+                            <video
+                              src={`${item.src}#t=0.001`}
+                              controls
+                              preload="metadata"
+                              playsInline
+                              className="snippet-video-player"
+                              onPlay={handleVideoPlay}
+                            />
+                            <div className="media-badge-top-left">
+                              <span className="media-pill-tag">
+                                <Film size={12} /> {item.category}
+                              </span>
+                            </div>
+                            <div className="media-badge-top-right">
+                              <span className="media-duration-tag">{item.duration}</span>
+                            </div>
+                          </div>
+
+                          <div className="media-card-body">
+                            <div className="media-meta-row">
+                              <span className="media-type-indicator">Video Snippet</span>
+                            </div>
+                            <h3 className="media-card-title">{item.title}</h3>
+                            <p className="media-card-desc">{item.desc}</p>
+
+                            <div className="media-card-actions">
+                              <button
+                                onClick={() => setPlatformModalTrack({
+                                  title: item.title,
+                                  spotifyUrl: 'https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ',
+                                  appleUrl: 'https://music.apple.com/us/artist/jeffrey-kay/1843324363',
+                                  youtubeUrl: 'https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr'
+                                })}
+                                className="btn btn-black snippet-action-btn"
+                              >
+                                <ExternalLink size={14} />
+                                <span>Stream on Platforms</span>
+                              </button>
+
+                              <button
+                                onClick={() => handleTabChange('contact')}
+                                className="btn btn-outline-dusty snippet-action-btn"
+                              >
+                                <Phone size={14} />
+                                <span>Book Jeffery Kay</span>
+                              </button>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      )
+                    }
 
-                      <div className="work-body">
-                        <div className="work-category">{work.category} • {work.year}</div>
-                        <h3 className="work-title">{work.title}</h3>
-                        <p className="work-desc">{work.desc}</p>
-
-                        {/* Interactive 30-Second Snippet Control Bar */}
-                        <div className="snippet-player-box">
-                          <div className="snippet-player-header">
-                            <span className="snippet-label">
-                              <Volume2 size={14} />
-                              {isPlaying ? 'Playing 30s Preview...' : '30-Second Audio Snippet'}
+                    return (
+                      <div key={item.id} className="media-card media-photo-card">
+                        <div className="media-photo-container" onClick={() => setPhotoModalOpen(item.src)}>
+                          <img
+                            src={item.src}
+                            alt={item.title}
+                            className="media-photo-img"
+                          />
+                          <div className="media-photo-overlay">
+                            <div className="photo-zoom-btn">
+                              <Maximize2 size={16} />
+                              <span>View Full Photo</span>
+                            </div>
+                          </div>
+                          <div className="media-badge-top-left">
+                            <span className="media-pill-tag photo-pill">
+                              <Camera size={12} /> {item.category}
                             </span>
-                            <span className="snippet-time">{isPlaying ? `${Math.round((snippetProgress / 100) * 30)}s / 30s` : '0:30'}</span>
-                          </div>
-
-                          <div className="snippet-progress-bar">
-                            <div className="snippet-progress-fill" style={{ width: `${isPlaying ? snippetProgress : 0}%` }} />
-                          </div>
-
-                          <div className="snippet-action-row">
-                            <button
-                              onClick={() => toggleSnippet(work.id)}
-                              className="btn btn-outline-dusty snippet-btn"
-                            >
-                              {isPlaying ? <Pause size={14} /> : <Play size={14} />}
-                              <span>{isPlaying ? 'Pause Snippet' : 'Play 30s Preview'}</span>
-                            </button>
-
-                            <button
-                              onClick={() => setPlatformModalTrack(work)}
-                              className="btn btn-black snippet-btn"
-                            >
-                              <ExternalLink size={14} />
-                              <span>Listen Full Track</span>
-                            </button>
                           </div>
                         </div>
 
-                        {/* Embedded YouTube Player Preview Box */}
-                        <div className="youtube-preview-container" style={{ marginTop: '16px' }}>
-                          <iframe
-                            width="100%"
-                            height="180"
-                            src={`https://www.youtube.com/embed/${work.youtubeEmbedId}`}
-                            title={work.title}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            style={{ borderRadius: 'var(--radius-sm)' }}
-                          ></iframe>
+                        <div className="media-card-body">
+                          <div className="media-meta-row">
+                            <span className="media-type-indicator">Live Stage Photography</span>
+                          </div>
+                          <h3 className="media-card-title">{item.title}</h3>
+                          <p className="media-card-desc">{item.desc}</p>
+
+                          <div className="media-card-actions">
+                            <button
+                              onClick={() => setPhotoModalOpen(item.src)}
+                              className="btn btn-black snippet-action-btn"
+                            >
+                              <Maximize2 size={14} />
+                              <span>Enlarge Stage Photo</span>
+                            </button>
+
+                            <button
+                              onClick={() => handleTabChange('contact')}
+                              className="btn btn-outline-dusty snippet-action-btn"
+                            >
+                              <Phone size={14} />
+                              <span>Book for Events</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )
-                })}
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </section>
         )}
 
-        {/* TAB 4: EMAIL CONTACT */}
+        {/* TAB 3: EMAIL CONTACT */}
         {activeTab === 'contact' && (
           <section id="contact" className="section section-bg-alt">
             <div className="container">
@@ -648,60 +697,87 @@ function App() {
                 <span className="section-tag">Get in Touch</span>
                 <h2 className="section-title">Contact &amp; Gospel Ministry Bookings</h2>
                 <p className="section-description">
-                  Connect with JeffreyK for church events, gospel concerts, and collaborations.
+                  Connect with Jeffery Kay for church events, gospel concerts, and collaborations.
                 </p>
               </div>
 
               <div className="contact-grid">
-                {/* Option B: Direct Email Form */}
                 <div id="contact-form-section" className="contact-card">
                   <div className="contact-icon-badge contact-icon-email">
                     <Mail size={28} />
                   </div>
                   <h3 className="contact-card-title">Send an Email</h3>
                   <p className="contact-card-desc">
-                    Send an official message to JeffreyK&apos;s management team for bookings and media inquiries.
+                    Send an official message to Jeffery Kay&apos;s management team for bookings and media inquiries.
                   </p>
+
+                  <p className="form-required-hint">
+                    Fields marked with <span className="required-star">*</span> are mandatory. All spaces must be completed to send.
+                  </p>
+
+                  {formError && (
+                    <div className="alert-error">
+                      <AlertCircle size={18} />
+                      <span>{formError}</span>
+                    </div>
+                  )}
 
                   {submitted && (
                     <div className="alert-success">
                       <CheckCircle size={18} />
-                      <span>Thank you! Your message was sent successfully to JeffreyK&apos;s team.</span>
+                      <span>Thank you! Your message was sent successfully to Jeffery Kay&apos;s team.</span>
                     </div>
                   )}
 
                   <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                      <label className="form-label">Your Name</label>
+                      <label className="form-label">
+                        Your Name <span className="required-star">*</span>
+                      </label>
                       <input
                         type="text"
                         className="form-input"
                         placeholder="e.g. Pastor / Event Organizer Name"
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, name: e.target.value })
+                          if (formError) setFormError('')
+                        }}
                         required
                       />
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">Your Email Address</label>
+                      <label className="form-label">
+                        Your Email Address <span className="required-star">*</span>
+                      </label>
                       <input
                         type="email"
                         className="form-input"
                         placeholder="e.g. organizer@example.com"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value })
+                          if (formError) setFormError('')
+                        }}
                         required
                       />
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">Inquiry Subject</label>
+                      <label className="form-label">
+                        Inquiry Subject <span className="required-star">*</span>
+                      </label>
                       <select
                         className="form-select"
                         value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, subject: e.target.value })
+                          if (formError) setFormError('')
+                        }}
+                        required
                       >
+                        <option value="">-- Please select an inquiry subject * --</option>
                         <option value="Gospel Booking Inquiry">Gospel Booking Inquiry</option>
                         <option value="Church Worship Invitation">Church Worship Invitation</option>
                         <option value="Music Collaboration">Music Collaboration</option>
@@ -710,12 +786,17 @@ function App() {
                     </div>
 
                     <div className="form-group">
-                      <label className="form-label">Your Message</label>
+                      <label className="form-label">
+                        Your Message <span className="required-star">*</span>
+                      </label>
                       <textarea
                         className="form-textarea"
                         placeholder="Write your message here..."
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onChange={(e) => {
+                          setFormData({ ...formData, message: e.target.value })
+                          if (formError) setFormError('')
+                        }}
                         required
                       ></textarea>
                     </div>
@@ -728,7 +809,7 @@ function App() {
 
                   <div style={{ marginTop: '16px', textAlign: 'center' }}>
                     <a
-                      href="mailto:jeffreykhumalo@gmail.com?subject=Jeffrey%20Kay%20Gospel%20Inquiry"
+                      href="mailto:jeffreykhumalo@gmail.com?subject=Jeffery%20Kay%20Gospel%20Inquiry"
                       className="company-email"
                       style={{ color: 'var(--dusty-blue-dark)', fontSize: '13px' }}
                     >
@@ -742,42 +823,99 @@ function App() {
         )}
       </main>
 
-      {/* Footer Section (simplified) */}
+      {/* Footer Section */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
-            <div>
-              <div className="footer-brand-title">JeffreyK</div>
-              <p className="footer-brand-desc">
-                Official website of South African Gospel artist JeffreyK. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
-              </p>
-            </div>
+          <div className="footer-centered-wrapper">
+            <div className="footer-brand-title">Jeffery Kay</div>
+            <p className="footer-brand-desc">
+              Official website of South African Gospel artist Jeffery Kay. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
+            </p>
 
             <div className="footer-socials">
-              <div className="footer-column-title">Follow</div>
+              <div className="footer-column-title">Follow Jeffery Kay</div>
               <div className="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61589357584986" className="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                  <FacebookIcon size={20} />
+                <a
+                  href="https://www.facebook.com/profile.php?id=61589357584986"
+                  className="footer-social-link footer-social-facebook"
+                  aria-label="Follow Jeffery Kay on Facebook"
+                  title="Follow Jeffery Kay on Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FacebookIcon size={28} />
                 </a>
-                <a href="https://www.tiktok.com/@jeffreykay81" className="footer-social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
-                  <TikTokIcon size={20} />
+                <a
+                  href="https://www.tiktok.com/@jeffreykay81"
+                  className="footer-social-link footer-social-tiktok"
+                  aria-label="Follow Jeffery Kay on TikTok"
+                  title="Follow Jeffery Kay on TikTok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TikTokIcon size={28} />
                 </a>
-                <a href="https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ" className="footer-social-link" aria-label="Spotify" target="_blank" rel="noopener noreferrer">
-                  <SpotifyIcon size={20} />
+                <a
+                  href="https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ"
+                  className="footer-social-link footer-social-spotify"
+                  aria-label="Stream Jeffery Kay on Spotify"
+                  title="Stream Jeffery Kay on Spotify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SpotifyIcon size={28} />
                 </a>
-                <a href="https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr" className="footer-social-link" aria-label="YouTube Music" target="_blank" rel="noopener noreferrer">
-                  <YoutubeIcon size={20} />
+                <a
+                  href="https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr"
+                  className="footer-social-link footer-social-youtube"
+                  aria-label="Listen to Jeffery Kay on YouTube Music"
+                  title="Listen to Jeffery Kay on YouTube Music"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <YoutubeIcon size={28} />
                 </a>
-                <a href="https://music.apple.com/us/artist/jeffrey-kay/1843324363" className="footer-social-link" aria-label="Apple Music" target="_blank" rel="noopener noreferrer">
-                  <Disc size={20} />
+                <a
+                  href="https://music.apple.com/us/artist/jeffrey-kay/1843324363"
+                  className="footer-social-link footer-social-applemusic"
+                  aria-label="Stream Jeffery Kay on Apple Music"
+                  title="Stream Jeffery Kay on Apple Music"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AppleMusicIcon size={28} />
                 </a>
               </div>
             </div>
-          </div>
 
-          <div className="footer-bottom">
-            <div>
-              &copy; {new Date().getFullYear()} JeffreyK. All rights reserved.
+            <div className="footer-bottom">
+              <div className="footer-copy">
+                &copy; {new Date().getFullYear()} Jeffery Kay. All rights reserved.
+              </div>
+              <div className="footer-developer-credit">
+                <div>Developed &amp; Maintained by: <strong>ValambyaT3ch</strong></div>
+                <div>
+                  Email:{' '}
+                  <a
+                    href="mailto:valambyat3ch@gmail.com?subject=Inquiry%20regarding%20Jeffery%20Kay%20Website"
+                    onClick={(e) => {
+                      try {
+                        window.open(
+                          'https://mail.google.com/mail/?view=cm&fs=1&to=valambyat3ch@gmail.com&su=Inquiry%20regarding%20Jeffery%20Kay%20Website',
+                          '_blank',
+                          'noopener,noreferrer'
+                        )
+                      } catch (err) {
+                        // fallback to default mailto
+                      }
+                    }}
+                    className="footer-dev-link"
+                    title="Click to compose an email to ValambyaT3ch"
+                  >
+                    valambyat3ch@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
