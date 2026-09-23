@@ -275,8 +275,8 @@ function App() {
     },
     {
       platform: 'TikTok',
-      handle: '@jeffreykay_gospel',
-      url: 'https://tiktok.com',
+      handle: '@user1522068470923',
+      url: 'https://www.tiktok.com/@user1522068470923?_r=1&_t=ZS-99yT4D5gP39',
       icon: TikTokIcon,
       desc: 'Short worship clips & inspirational messages'
     }
@@ -846,7 +846,7 @@ function App() {
                   <FacebookIcon size={28} />
                 </a>
                 <a
-                  href="https://www.tiktok.com/@jeffreykay81"
+                  href="https://www.tiktok.com/@user1522068470923?_r=1&_t=ZS-99yT4D5gP39"
                   className="footer-social-link footer-social-tiktok"
                   aria-label="Follow Jeffery Kay on TikTok"
                   title="Follow Jeffery Kay on TikTok"
