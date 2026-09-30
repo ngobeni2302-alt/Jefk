@@ -443,8 +443,15 @@ function App() {
 
       {/* Navigation Header */}
       <header className="navbar">
-        <div className="nav-brand">
-          <div className="brand-icon">JK</div>
+        <div
+          className="nav-brand"
+          onClick={() => handleTabChange('about')}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && handleTabChange('about')}
+          aria-label="Jeffery Kay Home"
+        >
+          <img src="/jeffrey_kay.jpg" alt="Jeffery Kay" className="brand-icon brand-icon-img" />
           <span className="brand-name">Jeffery Kay</span>
         </div>
 
@@ -829,7 +836,10 @@ function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-centered-wrapper">
-            <div className="footer-brand-title">Jeffery Kay</div>
+            <div className="footer-brand-header">
+              <img src="/jeffrey_kay.jpg" alt="Jeffery Kay" className="footer-brand-avatar" />
+              <div className="footer-brand-title">Jeffery Kay</div>
+            </div>
             <p className="footer-brand-desc">
               Official website of South African Gospel artist Jeffery Kay. Bringing inspirational praise, worship music, and gospel events to audiences worldwide.
             </p>
