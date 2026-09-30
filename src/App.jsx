@@ -235,7 +235,7 @@ function App() {
     {
       platform: 'Spotify',
       handle: 'Jeffery Kay',
-      url: 'https://spotify.com',
+      url: 'https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD',
       icon: SpotifyIcon,
       desc: 'Stream gospel tracks & latest worship releases'
     },
@@ -247,9 +247,9 @@ function App() {
       desc: 'Live worship sessions & inspirational updates'
     },
     {
-      platform: 'YouTube Music',
-      handle: 'Jeffery Kay Gospel',
-      url: 'https://music.youtube.com/watch?v=Ufq9mRs5pmw&si=9Hjf8dZpbU1v9krn',
+      platform: 'YouTube',
+      handle: 'JEFFREY KAY',
+      url: 'https://www.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q',
       icon: YoutubeIcon,
       desc: 'Official gospel music videos & live ministry'
     },    {
@@ -392,7 +392,7 @@ function App() {
                 <div className="platform-btn-left">
                   <YoutubeIcon size={24} />
                   <div>
-                    <div className="platform-name">YouTube Music</div>
+                    <div className="platform-name">YouTube</div>
                     <div className="platform-sub">Watch &amp; Stream Official Track</div>
                   </div>
                 </div>
@@ -611,9 +611,11 @@ function App() {
                               <button
                                 onClick={() => setPlatformModalTrack({
                                   title: item.title,
-                                  spotifyUrl: 'https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ',
+                                  spotifyUrl: 'https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD',
                                   appleUrl: 'https://music.apple.com/us/artist/jeffrey-kay/1843324363',
-                                  youtubeUrl: 'https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr'
+                                  youtubeUrl: item.id === 'media-video-1'
+                                    ? 'https://www.youtube.com/watch?v=Ufq9mRs5pmw'
+                                    : 'https://www.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q'
                                 })}
                                 className="btn btn-black snippet-action-btn"
                               >
@@ -856,7 +858,7 @@ function App() {
                   <TikTokIcon size={28} />
                 </a>
                 <a
-                  href="https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD?si=Ts6Q6xoZTWqLx_9b-F4PMQ"
+                  href="https://open.spotify.com/artist/7o5XdRDLZALMIFKZxvqDGD"
                   className="footer-social-link footer-social-spotify"
                   aria-label="Stream Jeffery Kay on Spotify"
                   title="Stream Jeffery Kay on Spotify"
@@ -866,10 +868,10 @@ function App() {
                   <SpotifyIcon size={28} />
                 </a>
                 <a
-                  href="https://music.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q?si=7mRSZrz6EnCELdBr"
+                  href="https://www.youtube.com/channel/UCTg28WaabFV6ai3bLQ6JO5Q"
                   className="footer-social-link footer-social-youtube"
-                  aria-label="Listen to Jeffery Kay on YouTube Music"
-                  title="Listen to Jeffery Kay on YouTube Music"
+                  aria-label="Listen to Jeffery Kay on YouTube"
+                  title="Listen to Jeffery Kay on YouTube"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -31,8 +31,8 @@ Visit the deployed website here: **[jefk.vercel.app](https://jefk.vercel.app/)**
    - **Jeffrey Kay — Live Stage Ministry**: Live stage photography showcasing his talent alongside his passion, with a high-definition Lightbox modal view.
    - Integrated native HTML5 video players with auto-pause coordination and full-screen controls.
 3. **Social Media & Streaming**:
-   - Official authentic vector brand icons for Facebook, TikTok, Spotify, YouTube Music, and Apple Music with interactive brand-colored hover glows.
-   - Multi-platform streaming modal for YouTube Music, Spotify, and Apple Music.
+   - Official authentic vector brand icons for Facebook, TikTok, Spotify, YouTube, and Apple Music with interactive brand-colored hover glows.
+   - Multi-platform streaming modal for YouTube, Spotify, and Apple Music.
 4. **Email Contact & Ministry Bookings**:
    - Direct gospel ministry inquiry form with strict required field validation, error feedback, and direct email client support.
 5. **Developer Credits & Footer**:
